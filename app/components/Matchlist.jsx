@@ -1,7 +1,7 @@
 import React from 'react';
 import jQuery from 'jquery';
-
-export default class Match extends React.Component {
+import Pair from './Pair';
+export default class Matchlist extends React.Component {
   constructor(){
     super();
     this.state = {
@@ -33,10 +33,7 @@ export default class Match extends React.Component {
     return this.state.matches.map((match) =>
       {
         return (
-          <div class="beer">
-            <img src={match.img}></img>
-            <p>{match.desc}</p>
-          </div>
+          <Pair beer={match.name} matchlink={match._id} movies={match.movies} />
         )
       });
   }

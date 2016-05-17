@@ -10,7 +10,6 @@ export default class App extends React.Component {
       <div id="wrapper">
         <Headerbar />
         {this.props.children}
-        <Foot />
         <div id="bgLoader"></div>
       </div>
     );

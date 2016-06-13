@@ -1,8 +1,14 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
-
+@import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+$dark-grey: #3C3F40;
+$lighter-grey: #596C76;
+$mid-green: #BAD894;
+$gold-yellow: #FCEDB4;
+$brick-red: #CD5D5D;
 * {
   box-sizing: border-box;
-  font-family: 'Open Sans', -apple-system, system, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 body{
   background-color: #222;
@@ -46,7 +52,7 @@ a {
   text-decoration: none;
   border-bottom: 1px solid rgba(0, 0, 0, 0);
   &:hover{
-    color: #464646;
+    color: $brick-red;
   }
   &.pairlink{
     width: 120px;
@@ -63,11 +69,75 @@ a {
     }
   }
 }
+
+.matchup{
+  h2{
+    color: #fff;
+    padding: .5em 0;
+    margin: 0 .5em;
+    font-size: 2.2em;
+    border-bottom: 1px dotted #fff;
+    /* letter-spacing: 0px; */
+    text-transform: uppercase;
+    font-style: italic;
+  }
+  .darken{
+    position: absolute;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .4);
+    z-index: -1;
+    width: 100%;
+  }
+  .beer, .flick{
+    display: inline-block;
+    width: 50%;
+    max-width: 50%;
+    float: left;
+    margin: 0;
+    position: absolute;
+    animation-duration: 1s;
+    animation-name: slide;
+    height: 100%;
+    z-index: 2;
+    font-family: 'Droid Serif', serif;
+    img{
+      display: none;
+    }
+    p{
+      color: #fff;
+      padding: .8em;
+    }
+  }
+  .flick{
+    animation-duration: 1.3s;
+    background: purple;
+    left: 50%;
+  }
+  .beer{
+    background: $lighter-grey;
+  }
+  .desc{
+    clear: both;
+    background-color: #fff;
+    width: 100%;
+    bottom: 0;
+    position: absolute;
+    max-height: 300px;
+    padding: 1.3em;
+    z-index: 3;
+  }
+}
 #header{
-  color: #fff;
-  border-bottom: 1px dotted #fff;
+  color: $mid-green;
+  background-color: $dark-grey;
+  padding: 1.2em;
+  font-family: 'Droid Serif', serif;
   a{
-    padding: .2em;
+    padding: .5rem;
+    color: $gold-yellow;
+    &:hover{
+      color: $mid-green;
+    }
   }
 }
 .beer{
@@ -80,6 +150,10 @@ a {
   img{
     max-width: 100%;
   }
+}
+@keyframes slide {
+    from {top: 100%;}
+    to {top: 0%;}
 }
 #footer{
   width: 100%;

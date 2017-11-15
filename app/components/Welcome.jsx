@@ -1,5 +1,6 @@
 import React from 'react';
 import Matchlist from './Matchlist';
+import Submit from './Submit';
 export default class Welcome extends React.Component {
   constructor(){
     super();
@@ -12,15 +13,15 @@ export default class Welcome extends React.Component {
     return (
       <div id="hero">
         <h1>What Are You {this.state.ctas[this.state.activeCta]}?</h1>
-        <Matchlist/>
+        <Submit/>
       </div>
     );
   }
   componentDidMount() {
-    this._timer = setInterval(() => this._updateCta(), 5000)
+    // this._timer = setInterval(() => this._updateCta(), 5000)
   }
   componentWillUnmount() {
-    clearInterval(this._timer);
+    // clearInterval(this._timer);
   }
   _updateCta() {
     if(this.state.activeCta < this.state.ctas.length-1){

@@ -4,6 +4,8 @@ import App from 'components/App';
 import Matchlist from 'components/Matchlist';
 import Matchup from 'components/Matchup';
 import Welcome from 'components/Welcome';
+// import WatchSelect from 'components/WatchSelect';
+// import SubmitBtn from 'components/SubmitBtn';
 import jquery from 'jquery';
 
 import { Router, Route, browserHistory, IndexRoute, Link } from 'react-router';

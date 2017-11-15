@@ -4,8 +4,10 @@ export default class Headerbar extends React.Component {
   render() {
     return (
       <div id="header">
-        <Link to="/">Home</Link>
-        <Link to="/match">Matches</Link>
+        <Link to="/">Check In</Link>
+        <Link to="/feed">Pairing</Link>
+        <Link to="/popular">Popular</Link>
+        <Link to="/profile">Profile</Link>
       </div>
     );
   }
